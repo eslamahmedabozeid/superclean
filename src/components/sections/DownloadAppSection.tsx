@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function DownloadAppSection() {
   return (
-    <section className="relative w-full bg-white border-b border-[#EBEBEB] overflow-hidden">
+    <section className="relative w-full bg-white border-b  overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2 ">
         {/* Left Column: Full-Bleed iPhone Mockup on Stone (Edge-to-Edge 50% split) */}
         <div className="relative w-full  lg:min-h-full bg-neutral-900 overflow-hidden">
