@@ -1,7 +1,12 @@
-export default function ServicePage() {
+import React from "react";
+import ServiceHeroSection from "@/components/sections/ServiceHeroSection";
+import CleanAndPressSection from "@/components/sections/CleanAndPressSection";
+
+export default function ServicesPage() {
   return (
-    <div className="min-h-[calc(100vh-4rem)] p-8">
-      {/* Ready for Service design */}
+    <div className="w-full bg-white">
+      <ServiceHeroSection />
+      <CleanAndPressSection />
     </div>
   );
 }
