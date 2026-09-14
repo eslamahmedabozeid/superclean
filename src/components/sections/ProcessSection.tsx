@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { FadeIn, UnderlineReveal, StaggerContainer, StaggerItem } from "@/components/ui/MotionReveal";
 
 interface ProcessStep {
   step: string;
@@ -44,18 +45,29 @@ export default function ProcessSection() {
   return (
     <section className="w-full bg-white border-b border-[#EBEBEB]">
       {/* Section Header */}
-      <div className="py-14 sm:py-20 lg:py-24 px-5 sm:px-8 text-center">
+      <FadeIn
+        direction="up"
+        distance={25}
+        duration={0.8}
+        className="py-14 sm:py-20 lg:py-24 px-5 sm:px-8 text-center"
+      >
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[56px] font-normal tracking-tight sm:tracking-[0.04em] text-[#0A0C0C] uppercase">
           THE SUPER CLEAN PROCESS
         </h2>
-        <div className="w-[60px] sm:w-[80px] h-[2px] bg-[#0A0C0C] mx-auto mt-3.5 sm:mt-4" />
-      </div>
+        <UnderlineReveal className="w-[60px] sm:w-[80px] h-[2px] bg-[#0A0C0C] mx-auto mt-3.5 sm:mt-4" />
+      </FadeIn>
 
       {/* 4 Process Columns (Edge-to-Edge) */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full">
+      <StaggerContainer
+        staggerDelay={0.12}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full"
+      >
         {steps.map((item, index) => (
-          <div
+          <StaggerItem
             key={index}
+            direction="up"
+            distance={35}
+            duration={0.85}
             className="relative w-full h-[460px] sm:h-[560px] lg:h-[680px] overflow-hidden group"
           >
             {/* Background Image */}
@@ -100,9 +112,9 @@ export default function ProcessSection() {
                 {item.description}
               </p>
             </div>
-          </div>
+          </StaggerItem>
         ))}
-      </div>
+      </StaggerContainer>
     </section>
   );
 }

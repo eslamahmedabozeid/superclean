@@ -1,13 +1,6 @@
-"use client";
-
-import React, { useState, useEffect } from "react";
-
-interface Testimonial {
-  platform: string;
-  comment: string;
-  name: string;
-  role: string;
-}
+import React from "react";
+import { FadeIn, UnderlineReveal } from "@/components/ui/MotionReveal";
+import TestimonialsSlider, { Testimonial } from "./TestimonialsSlider";
 
 export default function TestimonialsSection() {
   const testimonials: Testimonial[] = [
@@ -48,104 +41,24 @@ export default function TestimonialsSection() {
     },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [itemsPerPage, setItemsPerPage] = useState(3);
-  const [isPaused, setIsPaused] = useState(false);
-
-  // Responsive items per page
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 768) {
-        setItemsPerPage(1);
-      } else if (window.innerWidth < 1024) {
-        setItemsPerPage(2);
-      } else {
-        setItemsPerPage(3);
-      }
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const maxIndex = Math.max(0, testimonials.length - itemsPerPage);
-
-  // Autoplay functionality (every 3.5 seconds)
-  useEffect(() => {
-    if (isPaused || maxIndex <= 0) return;
-
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
-    }, 3500);
-
-    return () => clearInterval(interval);
-  }, [isPaused, maxIndex]);
-
   return (
     <section className="w-full bg-white py-14 sm:py-20 lg:py-30 border-b border-[#EBEBEB] overflow-hidden">
       <div className="w-full px-5 sm:px-10 md:px-16 lg:px-24 xl:px-28">
         {/* Section Header */}
-        <div className="text-center mb-10 sm:mb-16 lg:mb-24 px-4">
+        <FadeIn
+          direction="up"
+          distance={25}
+          duration={0.8}
+          className="text-center mb-10 sm:mb-16 lg:mb-24 px-4"
+        >
           <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-normal tracking-tight sm:tracking-[0.04em] text-[#0A0C0C] uppercase">
             WHAT OUR CLIENTS SAY
           </h2>
-          <div className="w-[60px] sm:w-[80px] h-[2px] bg-[#0A0C0C] mx-auto mt-3.5 sm:mt-4" />
-        </div>
+          <UnderlineReveal className="w-[60px] sm:w-[80px] h-[2px] bg-[#0A0C0C] mx-auto mt-3.5 sm:mt-4" />
+        </FadeIn>
 
-        {/* Testimonials Autoplay Slider Container */}
-        <div
-          className="relative"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-        >
-          {/* Slider Viewport */}
-          <div className="overflow-hidden">
-            <div
-              className="flex transition-transform duration-700 ease-in-out"
-              style={{
-                transform: `translateX(-${currentIndex * (100 / itemsPerPage)}%)`,
-              }}
-            >
-              {testimonials.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 px-4 sm:px-8 md:px-10 border-r border-[#EBEBEB]"
-                  style={{ width: `${100 / itemsPerPage}%` }}
-                >
-                  <div className="h-full flex flex-col justify-between">
-                    <div>
-                      {/* Quote mark & Platform */}
-                      <div className="flex items-center gap-2 mb-3 sm:mb-4">
-                        <span className="text-[#9A9A9A] text-xl font-serif leading-none select-none">
-                          &ldquo;
-                        </span>
-                        <span className="text-[14px] sm:text-[16px] text-[#0A0C0C] font-normal">
-                          {item.platform}
-                        </span>
-                      </div>
-
-                      {/* Comment */}
-                      <p className="text-[13px] sm:text-[15px] text-[#7A7A7A] font-normal leading-[1.65] mb-6 sm:mb-8 min-h-[90px] sm:min-h-[110px]">
-                        {item.comment}
-                      </p>
-                    </div>
-
-                    {/* Author Info */}
-                    <div className="pt-2">
-                      <h4 className="text-[13px] sm:text-[14px] font-normal tracking-[0.06em] text-[#0A0C0C] uppercase">
-                        {item.name}
-                      </h4>
-                      <p className="text-[12px] sm:text-[13px] text-[#9A9A9A] font-normal mt-0.5">
-                        {item.role}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
+        {/* Testimonials Autoplay Slider */}
+        <TestimonialsSlider testimonials={testimonials} />
       </div>
     </section>
   );

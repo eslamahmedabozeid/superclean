@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { FadeIn, ScaleIn } from "@/components/ui/MotionReveal";
 
 export default function OurMissionSection() {
   return (
@@ -7,14 +8,19 @@ export default function OurMissionSection() {
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[600px] lg:min-h-[680px]">
         {/* Left Column: Mission Typography & Narrative */}
         <div className="flex flex-col justify-center px-5 sm:px-10 md:px-16 lg:px-20 xl:px-24 py-14 sm:py-20 lg:py-24 order-2 lg:order-1">
-          <div className="w-full max-w-xl">
+          <FadeIn
+            direction="right"
+            distance={25}
+            duration={0.85}
+            className="w-full max-w-xl"
+          >
             {/* Heading */}
             <h2 className="text-3xl sm:text-4xl lg:text-[44px] xl:text-[44px] font-normal tracking-tight text-[#0A0C0C] uppercase leading-none mb-8 sm:mb-10">
               OUR MISSION
             </h2>
 
             {/* Narrative Paragraphs */}
-            <div className="space-y-6 text-[14px] sm:text-[16px] lg:text-[16px] text-[#555] font-normal leading-[1.75]">
+            <div className="space-y-6 text-[14px] sm:text-[16px] lg:text-[16px] text-[#666] font-normal leading-[1.75]">
               <p>
                 Super Clean is driven by a clear mission: to elevate fabric care
                 across Saudi Arabia through exceptional quality, meticulous
@@ -36,11 +42,15 @@ export default function OurMissionSection() {
                 experience that reflects the highest standards of quality.
               </p>
             </div>
-          </div>
+          </FadeIn>
         </div>
 
         {/* Right Column: Master Craftsman Hand-Pressing Photography */}
-        <div className="relative w-full min-h-[360px] sm:min-h-[480px] lg:min-h-full bg-neutral-900 overflow-hidden order-1 lg:order-2">
+        <ScaleIn
+          duration={1.1}
+          initialScale={1.04}
+          className="relative w-full min-h-[360px] sm:min-h-[480px] lg:min-h-full bg-neutral-900 overflow-hidden order-1 lg:order-2"
+        >
           <Image
             src="/image/about/3.png"
             alt="Our Mission - Precision and Craftsmanship"
@@ -48,7 +58,7 @@ export default function OurMissionSection() {
             className="object-cover object-center"
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
-        </div>
+        </ScaleIn>
       </div>
     </section>
   );

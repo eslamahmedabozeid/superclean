@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { FadeIn, UnderlineReveal, ScaleIn, StaggerContainer, StaggerItem } from "@/components/ui/MotionReveal";
 
 interface FeatureItem {
   label: string;
@@ -37,18 +38,29 @@ export default function WhySuperCleanSection() {
         <div className="flex flex-col justify-center px-5 sm:px-10 md:px-16 lg:px-20 xl:px-24 py-14 sm:py-20 lg:py-24">
           <div className="w-full max-w-xl mx-auto">
             {/* Centered Title & Underline */}
-            <div className="text-center mb-10 sm:mb-16">
+            <FadeIn
+              direction="up"
+              distance={25}
+              duration={0.8}
+              className="text-center mb-10 sm:mb-16"
+            >
               <h2 className="text-2xl sm:text-3xl lg:text-[48px] font-normal tracking-tight text-[#0A0C0C]">
                 Why Super Clean
               </h2>
-              <div className="w-[60px] sm:w-[80px] h-[2px] bg-[#0A0C0C] mx-auto mt-3.5 sm:mt-4" />
-            </div>
+              <UnderlineReveal className="w-[60px] sm:w-[80px] h-[2px] bg-[#0A0C0C] mx-auto mt-3.5 sm:mt-4" />
+            </FadeIn>
 
             {/* Feature Rows */}
-            <div className="divide-y divide-[#EBEBEB] border-t border-b border-[#EBEBEB]">
+            <StaggerContainer
+              staggerDelay={0.1}
+              className="divide-y divide-[#EBEBEB] border-t border-b border-[#EBEBEB]"
+            >
               {features.map((item, index) => (
-                <div
+                <StaggerItem
                   key={index}
+                  direction="left"
+                  distance={20}
+                  duration={0.7}
                   className="py-5 sm:py-7 flex flex-col sm:flex-row sm:items-start gap-1.5 sm:gap-8"
                 >
                   <span className="w-full sm:w-[180px] lg:w-[200px] shrink-0 text-[13px] sm:text-[14px] font-normal tracking-[0.05em] text-[#0A0C0C] uppercase">
@@ -57,14 +69,18 @@ export default function WhySuperCleanSection() {
                   <p className="text-[13px] sm:text-[14px] text-[#7A7A7A] font-normal leading-relaxed">
                     {item.description}
                   </p>
-                </div>
+                </StaggerItem>
               ))}
-            </div>
+            </StaggerContainer>
           </div>
         </div>
 
         {/* Right Column: Architectural Garment Runway Photography */}
-        <div className="relative w-full min-h-[340px] sm:min-h-[480px] lg:min-h-full bg-neutral-900 overflow-hidden">
+        <ScaleIn
+          duration={1.1}
+          initialScale={1.04}
+          className="relative w-full min-h-[340px] sm:min-h-[480px] lg:min-h-full bg-neutral-900 overflow-hidden"
+        >
           <Image
             src="/image/photo-right.png"
             alt="Why Super Clean - Luxury Garment Gallery"
@@ -72,7 +88,7 @@ export default function WhySuperCleanSection() {
             className="object-cover object-center"
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
-        </div>
+        </ScaleIn>
       </div>
     </section>
   );

@@ -1,15 +1,19 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/components/ui/MotionReveal";
 
 export default function Footer() {
   return (
     <footer className="w-full bg-[#0A0C0C] text-white pt-14 sm:pt-20 pb-12 overflow-hidden">
       <div className="w-full px-5 sm:px-10 md:px-16 lg:px-20 xl:px-28">
         {/* Top Brand Block */}
-        <div className="flex flex-col items-start justify-start">
+        <FadeIn
+          direction="up"
+          distance={20}
+          duration={0.75}
+          className="flex flex-col items-start justify-start"
+        >
           <Link href="/" className="inline-flex items-center gap-3">
             <Image
               src="/image/Vector.svg"
@@ -27,12 +31,15 @@ export default function Footer() {
             Every garment handled with couture precision, absolute privacy, and
             eco-conscious care.
           </p>
-        </div>
+        </FadeIn>
 
         {/* 3 Columns Navigation Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12 mt-14 sm:mt-18 pb-16 sm:pb-20">
+        <StaggerContainer
+          staggerDelay={0.1}
+          className="grid grid-cols-1 md:grid-cols-3 gap-10 sm:gap-12 mt-14 sm:mt-18 pb-16 sm:pb-20"
+        >
           {/* Column 1: Quick Links */}
-          <div>
+          <StaggerItem direction="up" distance={25} duration={0.8}>
             <h3 className="text-[18px] sm:text-[20px] font-normal text-white mb-6 tracking-tight">
               Quick Links
             </h3>
@@ -67,10 +74,10 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </StaggerItem>
 
           {/* Column 2: Services */}
-          <div>
+          <StaggerItem direction="up" distance={25} duration={0.8}>
             <h3 className="text-[18px] sm:text-[20px] font-normal text-white mb-6 tracking-tight">
               Services
             </h3>
@@ -108,10 +115,10 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </StaggerItem>
 
           {/* Column 3: Concierge */}
-          <div>
+          <StaggerItem direction="up" distance={25} duration={0.8}>
             <h3 className="text-[18px] sm:text-[20px] font-normal text-white mb-6 tracking-tight">
               Concierge
             </h3>
@@ -134,11 +141,11 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
-        </div>
+          </StaggerItem>
+        </StaggerContainer>
 
         {/* Bottom Bar: Copyright | Socials | Legal */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-[13px] text-[#737373]">
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-[13px] text-[#737373] border-t border-white/10">
           {/* Copyright */}
           <p>© 2026 SuperClean Laundry. All rights reserved.</p>
 
