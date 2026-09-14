@@ -5,6 +5,7 @@ import OurServicesSection from "@/components/sections/OurServicesSection";
 import ProcessSection from "@/components/sections/ProcessSection";
 import WhySuperCleanSection from "@/components/sections/WhySuperCleanSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
+import DownloadAppSection from "@/components/sections/DownloadAppSection";
 
 export default function HomePage() {
   return (
@@ -15,6 +16,7 @@ export default function HomePage() {
       <ProcessSection />
       <WhySuperCleanSection />
       <TestimonialsSection />
+      <DownloadAppSection />
     </div>
   );
 }
