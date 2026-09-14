@@ -4,6 +4,7 @@ import StatsSection from "@/components/sections/StatsSection";
 import OurServicesSection from "@/components/sections/OurServicesSection";
 import ProcessSection from "@/components/sections/ProcessSection";
 import WhySuperCleanSection from "@/components/sections/WhySuperCleanSection";
+import TestimonialsSection from "@/components/sections/TestimonialsSection";
 
 export default function HomePage() {
   return (
@@ -13,6 +14,7 @@ export default function HomePage() {
       <OurServicesSection />
       <ProcessSection />
       <WhySuperCleanSection />
+      <TestimonialsSection />
     </div>
   );
 }
