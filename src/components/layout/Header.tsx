@@ -47,11 +47,10 @@ export default function Header() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`relative text-[15px] font-normal transition-colors duration-200 py-1 ${
-                    isActive
+                  className={`relative text-[15px] font-normal transition-colors duration-200 py-1 ${isActive
                       ? "text-neutral-900 font-medium"
                       : "text-neutral-400 hover:text-neutral-900"
-                  }`}
+                    }`}
                 >
                   {link.name}
                   {isActive && (
@@ -92,7 +91,7 @@ export default function Header() {
                 height={14}
                 className="w-3.5 h-3.5 object-contain shrink-0"
               />
-              <span>App</span>
+              <span>Download App</span>
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -119,11 +118,10 @@ export default function Header() {
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`block py-2 text-base transition-colors ${
-                  isActive
+                className={`block py-2 text-base transition-colors ${isActive
                     ? "text-neutral-900 font-semibold"
                     : "text-neutral-500 hover:text-neutral-900"
-                }`}
+                  }`}
               >
                 {link.name}
               </Link>

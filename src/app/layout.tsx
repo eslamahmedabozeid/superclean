@@ -1,22 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
   title: "SuperClean",
-  description: "SuperClean web application",
+  description: "SuperClean luxury garment care & laundry",
 };
 
 export default function RootLayout({
@@ -27,9 +23,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${dmSans.variable} font-sans h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#fcfdfe] text-slate-900">
+      <body className="min-h-full flex flex-col bg-white text-[#0A0C0C] font-sans">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
