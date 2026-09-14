@@ -1,7 +1,12 @@
+import React from "react";
+import AboutHeroSection from "@/components/sections/AboutHeroSection";
+import OurStorySection from "@/components/sections/OurStorySection";
+
 export default function AboutPage() {
   return (
-    <div className="min-h-[calc(100vh-4rem)] p-8">
-      {/* Ready for About design */}
+    <div className="w-full bg-white">
+      <AboutHeroSection />
+      <OurStorySection />
     </div>
   );
 }
