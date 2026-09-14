@@ -110,17 +110,17 @@ export default function StatsSection() {
       ref={sectionRef}
       className="w-full bg-white border-b border-[#EBEBEB]"
     >
-      <div className="w-full px-8 sm:px-14 md:px-20 lg:px-24 xl:px-28 py-12 sm:py-16">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 text-center">
+      <div className="w-full px-5 sm:px-10 md:px-16 lg:px-20 xl:px-28 py-10 sm:py-16">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 text-center">
           {statsConfig.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-center"
+              className="flex flex-col items-center justify-center py-2"
             >
-              <span className="text-2xl sm:text-3xl lg:text-[24px] font-normal tracking-tight text-[#0A0C0C]">
+              <span className="text-xl sm:text-2xl lg:text-[24px] font-normal tracking-tight text-[#0A0C0C]">
                 {formatValue(index)}
               </span>
-              <span className="text-xs sm:text-[16px] font-normal mt-2 tracking-normal text-[#9A9A9A]">
+              <span className="text-xs sm:text-[15px] lg:text-[16px] font-normal mt-1.5 sm:mt-2 tracking-normal text-[#9A9A9A]">
                 {item.label}
               </span>
             </div>

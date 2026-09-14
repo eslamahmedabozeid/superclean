@@ -83,14 +83,14 @@ export default function TestimonialsSection() {
   }, [isPaused, maxIndex]);
 
   return (
-    <section className="w-full bg-white py-20 sm:py-30 border-b border-[#EBEBEB] overflow-hidden">
-      <div className="w-full px-8 sm:px-14 md:px-20 lg:px-24 xl:px-28">
+    <section className="w-full bg-white py-14 sm:py-20 lg:py-30 border-b border-[#EBEBEB] overflow-hidden">
+      <div className="w-full px-5 sm:px-10 md:px-16 lg:px-24 xl:px-28">
         {/* Section Header */}
-        <div className="text-center mb-16 sm:mb-24">
-          <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-normal tracking-[0.04em] text-[#0A0C0C] uppercase">
+        <div className="text-center mb-10 sm:mb-16 lg:mb-24 px-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-[40px] font-normal tracking-tight sm:tracking-[0.04em] text-[#0A0C0C] uppercase">
             WHAT OUR CLIENTS SAY
           </h2>
-          <div className="w-[80px] h-[2px] bg-[#0A0C0C] mx-auto mt-4" />
+          <div className="w-[60px] sm:w-[80px] h-[2px] bg-[#0A0C0C] mx-auto mt-3.5 sm:mt-4" />
         </div>
 
         {/* Testimonials Autoplay Slider Container */}
@@ -110,23 +110,23 @@ export default function TestimonialsSection() {
               {testimonials.map((item, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 px-6 sm:px-8 md:px-10 border-r border-[#EBEBEB]"
+                  className="flex-shrink-0 px-4 sm:px-8 md:px-10 border-r border-[#EBEBEB]"
                   style={{ width: `${100 / itemsPerPage}%` }}
                 >
                   <div className="h-full flex flex-col justify-between">
                     <div>
                       {/* Quote mark & Platform */}
-                      <div className="flex items-center gap-2 mb-4">
+                      <div className="flex items-center gap-2 mb-3 sm:mb-4">
                         <span className="text-[#9A9A9A] text-xl font-serif leading-none select-none">
                           &ldquo;
                         </span>
-                        <span className="text-[15px] sm:text-[16px] text-[#0A0C0C] font-normal">
+                        <span className="text-[14px] sm:text-[16px] text-[#0A0C0C] font-normal">
                           {item.platform}
                         </span>
                       </div>
 
                       {/* Comment */}
-                      <p className="text-[14px] sm:text-[15px] text-[#7A7A7A] font-normal leading-[1.7] mb-8 min-h-[110px]">
+                      <p className="text-[13px] sm:text-[15px] text-[#7A7A7A] font-normal leading-[1.65] mb-6 sm:mb-8 min-h-[90px] sm:min-h-[110px]">
                         {item.comment}
                       </p>
                     </div>

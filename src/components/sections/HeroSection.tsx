@@ -6,22 +6,22 @@ export default function HeroSection() {
     <section className="relative w-full border-b border-[#C8C8C8] overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[calc(100vh-5rem)]">
         {/* Left Column: Typography & Action */}
-        <div className="flex flex-col justify-center px-8 sm:px-14 md:px-20 lg:px-24 xl:px-28 py-16 sm:py-20 lg:py-0">
+        <div className="flex flex-col justify-center px-5 sm:px-10 md:px-16 lg:px-20 xl:px-28 py-12 sm:py-16 lg:py-0">
           <div className="">
-            <h1 className="text-4xl sm:text-5xl lg:text-[58px] xl:text-[68px] font-normal tracking-tight text-neutral-900 leading-[1.08]">
+            <h1 className="text-3xl sm:text-5xl lg:text-[58px] xl:text-[68px] font-normal tracking-tight text-neutral-900 leading-[1.1] sm:leading-[1.08]">
               Exceptional Care for <br />
               Every Garment.
             </h1>
 
-            <p className="mt-7 text-base sm:text-[18px] text-[#0A0C0C] leading-relaxed max-w-[430px]">
+            <p className="mt-5 sm:mt-7 text-[15px] sm:text-[18px] text-[#0A0C0C] leading-relaxed max-w-[430px]">
               White-glove care for high-end fabrics, tailored garments, and
               precious home linens. Nothing less.
             </p>
 
-            <div className="mt-9">
+            <div className="mt-7 sm:mt-9">
               <button
                 type="button"
-                className="inline-flex items-center justify-center gap-3 bg-[#0A0C0C] hover:bg-neutral-800 text-white text-[15px] font-normal tracking-[0.03em] px-7 py-3.5 rounded-[3px] transition-colors shadow-xs cursor-pointer"
+                className="inline-flex items-center justify-center gap-3 bg-[#0A0C0C] hover:bg-neutral-800 text-white text-[15px] font-normal tracking-[0.03em] px-6 sm:px-7 py-3 sm:py-3.5 rounded-[3px] transition-colors shadow-xs cursor-pointer"
               >
                 <Image
                   src="/image/download.svg"
@@ -30,14 +30,14 @@ export default function HeroSection() {
                   height={18}
                   className="w-[18px] h-[18px] object-contain shrink-0"
                 />
-                <span className="text-[16px]">Download App</span>
+                <span className="text-[15px] sm:text-[16px]">Download App</span>
               </button>
             </div>
           </div>
         </div>
 
         {/* Right Column: Hero Image */}
-        <div className="relative w-full min-h-[480px] sm:min-h-[560px] lg:min-h-full bg-neutral-900 overflow-hidden">
+        <div className="relative w-full min-h-[360px] sm:min-h-[480px] lg:min-h-full bg-neutral-900 overflow-hidden">
           <Image
             src="/image/Hero-Right-Image.png"
             alt="Exceptional Care for Every Garment"

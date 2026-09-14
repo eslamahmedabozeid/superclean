@@ -6,8 +6,8 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#0A0C0C] text-white pt-16 sm:pt-20 pb-12 overflow-hidden">
-      <div className="w-full px-8 sm:px-14 md:px-20 lg:px-24 xl:px-28">
+    <footer className="w-full bg-[#0A0C0C] text-white pt-14 sm:pt-20 pb-12 overflow-hidden">
+      <div className="w-full px-5 sm:px-10 md:px-16 lg:px-20 xl:px-28">
         {/* Top Brand Block */}
         <div className="flex flex-col items-start justify-start">
           <Link href="/" className="inline-flex items-center gap-3">
