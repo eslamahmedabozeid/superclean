@@ -1,7 +1,10 @@
+import React from "react";
+import HeroSection from "@/components/home/HeroSection";
+
 export default function HomePage() {
   return (
-    <div className="min-h-[calc(100vh-4rem)] p-8">
-      {/* Ready for Home design */}
+    <div className="w-full bg-white">
+      <HeroSection />
     </div>
   );
 }
