@@ -2,6 +2,7 @@ import React from "react";
 import HeroSection from "@/components/home/HeroSection";
 import StatsSection from "@/components/home/StatsSection";
 import OurServicesSection from "@/components/home/OurServicesSection";
+import ProcessSection from "@/components/home/ProcessSection";
 
 export default function HomePage() {
   return (
@@ -9,6 +10,7 @@ export default function HomePage() {
       <HeroSection />
       <StatsSection />
       <OurServicesSection />
+      <ProcessSection />
     </div>
   );
 }
