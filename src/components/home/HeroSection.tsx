@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full border-b border-neutral-100 overflow-hidden">
+    <section className="relative w-full border-b border-[#C8C8C8] overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[calc(100vh-5rem)]">
         {/* Left Column: Typography & Action */}
         <div className="flex flex-col justify-center px-8 sm:px-14 md:px-20 lg:px-24 xl:px-28 py-16 sm:py-20 lg:py-0">
