@@ -11,8 +11,14 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "SuperClean",
-  description: "SuperClean luxury garment care & laundry",
+  title: "SuperClean | Luxury Garment Care & Laundry",
+  description: "SuperClean luxury garment care & laundry in Riyadh, Saudi Arabia.",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-icon.svg",
+  },
 };
 
 export default function RootLayout({
