@@ -3,6 +3,7 @@ import HeroSection from "@/components/home/HeroSection";
 import StatsSection from "@/components/home/StatsSection";
 import OurServicesSection from "@/components/home/OurServicesSection";
 import ProcessSection from "@/components/home/ProcessSection";
+import WhySuperCleanSection from "@/components/home/WhySuperCleanSection";
 
 export default function HomePage() {
   return (
@@ -11,6 +12,7 @@ export default function HomePage() {
       <StatsSection />
       <OurServicesSection />
       <ProcessSection />
+      <WhySuperCleanSection />
     </div>
   );
 }
