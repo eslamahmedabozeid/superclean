@@ -6,8 +6,8 @@ export default function DownloadAppSection() {
     <section className="relative w-full bg-white border-b  overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2 ">
         {/* Left Column: Full-Bleed iPhone Mockup on Stone (Edge-to-Edge 50% split) */}
-        <div className="relative w-full  lg:min-h-full bg-neutral-900 overflow-hidden">
-          <img className="w-full" src='image/downloadapp/FreeiPhoneAir.png' />
+        <div className="relative w-full lg:min-h-full bg-neutral-900 overflow-hidden">
+          <img className="w-full h-full object-cover" src="/image/downloadapp/FreeiPhoneAir.png" alt="SuperClean App on iPhone" />
         </div>
 
         {/* Right Column: Title, Description & Store Actions */}
@@ -15,15 +15,12 @@ export default function DownloadAppSection() {
           <div className="mx-auto flex flex-col items-center w-full max-w-lg">
             {/* Title */}
             <h2 className="text-3xl sm:text-4xl lg:text-[50px] xl:text-[56px] font-normal tracking-tight text-[#0A0C0C] leading-[1.1]">
-              GET THE SUPER
-              <br />
-              CLEAN
-              <br />
+              GET THE SUPER CLEAN
               EXPERIENCE
             </h2>
 
             {/* Description */}
-            <p className="text-[14px] sm:text-[16px] text-[#4A4D4D] font-normal leading-[1.65] mt-5 mb-8 sm:mb-10 max-w-[440px]">
+            <p className="text-[14px] sm:text-[20px] text-[#4A4D4D] font-normal leading-[1.65] mt-5 mb-8 sm:mb-10 max-w-[440px]">
               Enjoy flawless schedules, order tracking, and dedicated service
               right at your fingertips. Available now on your favorite store.
             </p>

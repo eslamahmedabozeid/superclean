@@ -4,6 +4,7 @@ import CleanAndPressSection from "@/components/sections/CleanAndPressSection";
 import WashAndFoldSection from "@/components/sections/WashAndFoldSection";
 import BedAndBathSection from "@/components/sections/BedAndBathSection";
 import PressOnlySection from "@/components/sections/PressOnlySection";
+import DownloadAppSection from "@/components/sections/DownloadAppSection";
 
 export default function ServicesPage() {
   return (
@@ -13,6 +14,7 @@ export default function ServicesPage() {
       <WashAndFoldSection />
       <BedAndBathSection />
       <PressOnlySection />
+      <DownloadAppSection />
     </div>
   );
 }
