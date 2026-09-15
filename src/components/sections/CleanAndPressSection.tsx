@@ -51,13 +51,7 @@ export default function CleanAndPressSection() {
           <div className="absolute inset-0 bg-black/40 bg-gradient-to-t from-black/95 via-black/65 to-black/30" />
 
           {/* Bottom Left Content Overlay */}
-          <FadeIn
-            direction="up"
-            distance={20}
-            delay={0.15}
-            duration={0.8}
-            className="absolute bottom-6 sm:bottom-10 md:bottom-12 left-6 sm:left-10 md:left-12 right-6 sm:right-10 md:right-12 max-w-xl z-10"
-          >
+          <div className="absolute bottom-6 sm:bottom-10 md:bottom-12 left-6 sm:left-10 md:left-12 right-6 sm:right-10 md:right-12 max-w-xl z-10">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[36px] font-normal tracking-[0.04em] text-white uppercase">
               CLEAN & PRESS
             </h2>
@@ -66,7 +60,7 @@ export default function CleanAndPressSection() {
               pressing. Tailored explicitly for delicate wools, silks, and evening
               wear.
             </p>
-          </FadeIn>
+          </div>
         </FadeIn>
 
         {/* 4 Feature Sub-cards Grid */}

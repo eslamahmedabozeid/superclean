@@ -327,7 +327,7 @@ export default function BookingModal() {
                     <button
                       type="button"
                       key={freq.id}
-                      onClick={() => setFrequency(freq.id as any)}
+                      onClick={() => setFrequency(freq.id as "one-time" | "weekly" | "bi-weekly" | "monthly")}
                       className={`p-2.5 rounded-xl border text-center transition ${
                         frequency === freq.id
                           ? "border-emerald-500 bg-emerald-50/70 text-emerald-900 font-semibold ring-2 ring-emerald-400/30"

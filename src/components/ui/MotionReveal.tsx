@@ -44,7 +44,7 @@ export const FadeIn: React.FC<FadeInProps> = ({
     <motion.div
       initial={{ opacity: 0, ...getInitialPos() }}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
-      viewport={{ once, margin: "-50px" }}
+      viewport={{ once, margin: "0px 0px -40px 0px", amount: 0.05 }}
       transition={{
         duration,
         delay,
@@ -80,7 +80,7 @@ export const ScaleIn: React.FC<ScaleInProps> = ({
     <motion.div
       initial={{ opacity: 0, scale: initialScale }}
       whileInView={{ opacity: 1, scale: 1 }}
-      viewport={{ once, margin: "-50px" }}
+      viewport={{ once, margin: "0px 0px -40px 0px", amount: 0.05 }}
       transition={{
         duration,
         delay,
@@ -103,7 +103,7 @@ export const UnderlineReveal: React.FC<{
     <motion.div
       initial={{ scaleX: 0, opacity: 0 }}
       whileInView={{ scaleX: 1, opacity: 1 }}
-      viewport={{ once: true, margin: "-50px" }}
+      viewport={{ once: true, margin: "0px 0px -40px 0px", amount: 0.05 }}
       transition={{ duration, delay, ease: LUXURY_EASE }}
       className={className}
     />
@@ -125,7 +125,7 @@ export const StaggerContainer: React.FC<{
     <motion.div
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, margin: "-50px" }}
+      viewport={{ once: true, margin: "0px 0px -40px 0px", amount: 0.05 }}
       variants={{
         hidden: {},
         show: {

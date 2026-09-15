@@ -9,40 +9,41 @@ export default function DownloadAppSection() {
         {/* Left Column: Full-Bleed iPhone Mockup on Stone (Edge-to-Edge 50% split) */}
         <ScaleIn
           duration={1.1}
-          className="relative w-full lg:min-h-full bg-neutral-900 overflow-hidden"
+          className="relative w-full min-h-[360px] sm:min-h-[480px] lg:min-h-full bg-neutral-900 overflow-hidden"
         >
-          <img
-            className="w-full h-full object-cover"
+          <Image
             src="/image/downloadapp/FreeiPhoneAir.png"
             alt="SuperClean App on iPhone"
+            fill
+            className="object-cover object-center"
+            sizes="(max-width: 1024px) 100vw, 50vw"
           />
         </ScaleIn>
 
         {/* Right Column: Title, Description & Store Actions */}
         <div className="flex flex-col items-center justify-center text-center px-5 sm:px-10 md:px-16 lg:px-20 xl:px-24 py-14 sm:py-20 lg:py-24">
-          <FadeIn
-            direction="up"
-            distance={30}
-            duration={0.85}
-            className="mx-auto flex flex-col items-center w-full max-w-lg"
-          >
+          <div className="mx-auto flex flex-col items-center w-full max-w-lg">
             {/* Title */}
-            <h2 className="text-3xl sm:text-4xl lg:text-[50px] xl:text-[56px] tracking-tight text-[#0A0C0C] leading-[1.1]">
-              GET THE SUPER CLEAN
-              EXPERIENCE
-            </h2>
+            <FadeIn direction="up" distance={25} duration={0.85}>
+              <h2 className="text-3xl sm:text-4xl lg:text-[50px] xl:text-[56px] tracking-tight text-[#0A0C0C] leading-[1.1]">
+                GET THE SUPER CLEAN
+                EXPERIENCE
+              </h2>
+            </FadeIn>
 
             {/* Description */}
-            <p className="text-[14px] sm:text-[20px] text-[#4A4D4D] font-normal leading-[1.65] mt-5 mb-8 sm:mb-10 max-w-[440px]">
-              Enjoy flawless schedules, order tracking, and dedicated service
-              right at your fingertips. Available now on your favorite store.
-            </p>
+            <FadeIn direction="up" distance={20} delay={0.15} duration={0.8}>
+              <p className="text-[14px] sm:text-[20px] text-[#4A4D4D] font-normal leading-[1.65] mt-5 mb-8 sm:mb-10 max-w-[440px]">
+                Enjoy flawless schedules, order tracking, and dedicated service
+                right at your fingertips. Available now on your favorite store.
+              </p>
+            </FadeIn>
 
             {/* Action Group: QR Code SVG + App Store Buttons */}
             <FadeIn
               direction="up"
               distance={20}
-              delay={0.2}
+              delay={0.25}
               duration={0.75}
               className="flex flex-wrap sm:flex-nowrap items-center justify-center gap-3.5 sm:gap-4"
             >
@@ -113,7 +114,7 @@ export default function DownloadAppSection() {
                 </a>
               </div>
             </FadeIn>
-          </FadeIn>
+          </div>
         </div>
       </div>
     </section>
